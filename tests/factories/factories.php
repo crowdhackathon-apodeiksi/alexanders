@@ -1,7 +1,7 @@
 <?php
 $factory('App\Receipt', [
     'aa' => $faker->numberBetween(10000, 1000000),
-    'afm' => $faker->numberBetween(100000000, 999999999),
+    'afm' => '509645501',
     'eponimia' => 'Καφετέρια',
     'poso' => $faker->randomFloat(2, 1, 5000),
     'image' => 'http://katohika.gr/wp-content/uploads/2014/08/avti-einai-i-pio-asteia-apodeiksi-pou-exete-dei.jpg',
