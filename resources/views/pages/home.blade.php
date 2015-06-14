@@ -13,7 +13,7 @@
                                 <strong>Whoops!</strong> {{$errors->first()}}
                             </div>
                         @endif
-                        <img src="/images/glamour.jpg" class="image-responsive image-circle"
+                        <img src="/images/glamour.jpg" class="img-responsive img-circle"/>
                         Καφέ μπαρ Glamour, με 75 αποδείξεις μέχρι στιγμής.
                     </div>
                 </div>
