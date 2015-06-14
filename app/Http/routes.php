@@ -52,7 +52,7 @@ Route::delete('api/me/receipts/{receipt}/categories/{category}', ['as' => 'api.m
 
 Route::resource('api/promotions', 'PromotionsController', ['only' => ['store', 'index']]);
 
-Route::get('ocr', function()
+Route::any('ocr', function()
 {
     $a= Request::all();
     file_put_contents(public_path().'/images/malakies/input2.txt',$a);
