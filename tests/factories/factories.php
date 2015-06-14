@@ -2,9 +2,9 @@
 $factory('App\Receipt', [
     'aa' => $faker->numberBetween(10000, 1000000),
     'afm' => $faker->numberBetween(100000000, 999999999),
-    'eponimia' => 'Μασούτης',
+    'eponimia' => 'Καφετέρια',
     'poso' => $faker->randomFloat(2, 1, 5000),
-    'image' => 'http://www.xblog.gr/wp-content/uploads/2008/05/apodeiksi.jpg',
+    'image' => 'http://katohika.gr/wp-content/uploads/2014/08/avti-einai-i-pio-asteia-apodeiksi-pou-exete-dei.jpg',
     'printed_at' => $faker->dateTime(),
     'user_id' => 1
 ]);
