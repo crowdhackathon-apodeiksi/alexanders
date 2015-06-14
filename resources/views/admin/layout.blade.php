@@ -33,10 +33,10 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="{{ URL::route('admin.categories') }}">Αποδείξεις χρηστών</a></li>
+                <li><a href="{{ URL::route('admin.receipts') }}">Αποδείξεις χρηστών</a></li>
             </ul>
             <ul class="nav navbar-nav">
-                <li><a href="{{ URL::route('admin.receipts') }}">Κατηγορίες χρηστών</a></li>
+                <li><a href="{{ URL::route('admin.categories') }}">Κατηγορίες χρηστών</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
