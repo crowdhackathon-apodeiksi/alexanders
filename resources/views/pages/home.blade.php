@@ -7,13 +7,13 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">Το Top μαγαζί της ημέρας κοντά στην περιοχή σου</div>
 
-                    <div class="panel-body">
+                    <div class="panel-body" style="text-align: center;">
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">
                                 <strong>Whoops!</strong> {{$errors->first()}}
                             </div>
                         @endif
-                        <img src="/images/glamour.jpg" class="img-responsive img-circle" width="200px"/>
+                        <img src="/images/glamour.jpg" class="img-responsive img-circle" width="400px"/>
                         <h3>Καφέ μπαρ Glamour, με 75 αποδείξεις μέχρι στιγμής.</h3>
                     </div>
                 </div>
