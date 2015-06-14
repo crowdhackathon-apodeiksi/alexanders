@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Home</div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Το Top μαγαζί της ημέρας κοντά στην περιοχή σου</div>
 
                     <div class="panel-body">
                         @if (count($errors) > 0)
@@ -13,7 +13,8 @@
                                 <strong>Whoops!</strong> {{$errors->first()}}
                             </div>
                         @endif
-                        You are logged in!
+                        <img src="/images/glamour.jpg" class="image-responsive image-circle"
+                        Καφέ μπαρ Glamour, με 75 αποδείξεις μέχρι στιγμής.
                     </div>
                 </div>
             </div>
