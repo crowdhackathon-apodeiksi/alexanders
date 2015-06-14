@@ -10,7 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 use App\Receipt;
 
 Route::get('/', 'PagesController@index');
@@ -55,79 +54,63 @@ Route::resource('api/promotions', 'PromotionsController', ['only' => ['store', '
 
 Route::get('ocr', function()
 {
+    $a= Request::all();
+    file_put_contents(public_path().'/images/malakies/input2.txt',$a);
     $text="
 
+GAZOO
+KA®E MHAP
+{TAP AH TOYPIZTIKH TEKNEKH
+WYXAFQFIKH ENE
+UEIPAIQI 111240121w A®HNA
+THA:210341388&
+A.®,M: 997793450 % A01: AﬂHNQN :1
 
+HMEF’.: 14/06/2015 11:34:31
+TPA11:DEL XEPB: 1AMEIO .
+AHOAEIEH AIANIKHZ 1111AH£HX
 
+A/A:87891
+EIAOZ rlozor A;IA cb n A
+E§5§E830 1,00 1,80 13
+EKHTQZH 0,00
+EYNOAO 1,80
 
-
-
-Y ‘ ' ; a , f
-¢ . - f
-nmJ 7 ,- ‘ﬁ:
-
-' ‘0Ptu- g %
-
-EVXAF'ITOY
-
-OPOAOHKHKﬁOAHEH'?Ewen ;
-BOVLEVHRD
-
-A,KH¢ETEPIR
-:RHHflﬂNNIAOY EAENH
-
-VHRH/Apoy 50 ﬂEYKR
-QEZ/KH Kev E QEXIKHE
-00M 11310256?
-THA12310A6761/1
-
-EYXRPXETOYME
-13} 3‘00 13.00%
-13» 3‘00 13.00:
-
-RP.TEMRXIHN 2
-
-2000 g W
-HAHPRHH ME r1000 5&2
-
-HH.HP‘AEATIRN LEUARN
-mpooa ﬂP.AEAT EEOARN 35800
-
-KVPIRKH 31~05~15 0P0 20138
-XEWINHXl HMEm
-HPIGMOZ MHIPHOV 001 14001300 v
-HHwa:033t51540210000L00r003I060
-D22081B3RH2\ 0
-
-umammummLuIumﬁﬁmuxmm
-rI”msulmumumu\\\\
-
- ‘ w
-‘5“ sizuﬁ :0
-
-r. m 00 000710020:
-
-
-
-
-
-«‘1
-
-
-
-
-
+EYXAPIXTOYME noAy
 
 
 
 ";
     $text= str_replace('?', '7', $text);
+    $text= str_replace('&', '8', $text);
 
     preg_match_all('![0-9]{9}!', $text, $afmes);
+
+    foreach ($afmes[0] as $afm)
+    {
+        if(strtolower($afm[0] != '1') && strtolower($afm[0] != '2')){
+            echo $afm;
+        }
+//        if($afm<19999999 || $afm>299999999){
+//            if($afm<111 || $afm>299999999)
+//        }
+    }
+
+    preg_match_all('![0-9,]{3,5}!', $text, $posa);
+    echo end($posa[0]);
+
+
+    return 'ok';
     $afm=$afmes[0][0];
     return "Receipt afm: ".$afm;
     return 'end';
 });
+
+
+
+
+
+
 Route::get('export-routes', function()
 {
     header('Content-Type: application/excel');
