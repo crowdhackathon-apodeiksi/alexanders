@@ -55,7 +55,8 @@ Route::resource('api/promotions', 'PromotionsController', ['only' => ['store', '
 Route::any('ocr', function()
 {
     $a= Request::all();
-    file_put_contents(public_path().'/images/malakies/input2.txt',$a);
+    file_put_contents(public_path().'/images/malakies/input2.jpg',$a);
+    return 'ok';
     $text="
 
 GAZOO
