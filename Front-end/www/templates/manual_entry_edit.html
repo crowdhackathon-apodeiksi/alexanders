@@ -1,0 +1,60 @@
+<ion-view view-title="Manual">
+<ion-content has-bouncing="true">
+<div class="row">
+	<form name='awss' novalidate class="col s12">
+		<div class="row">
+			<div class="input-field col s6">
+			<input id='affm' name='afm' ng-model='receipt.afm' ng-blur="check('afm')" type="number" class="validate">
+				<label for="afm">ΑΦΜ</label>
+				<span class='red-text text-lighten-1' ng-show="awss.afm.$dirty && awss.afm.$invalid">*Please enter a number</span>
+			</div>
+			<div class="input-field col s6">
+			<input type="number" name="aa" class='validate' ng-blur="check('aa')" ng-model="receipt.aa"
+            >
+			<label for="aa">ΑΑ</label>
+			<span class='red-text text-lighten-1' ng-show="awss.aa.$dirty && awss.aa.$invalid">*Please enter a number</span>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="input-field col s6">
+			<input id="eponimia" type="text" ng-model='receipt.eponimia' class="validate">
+				<label for="eponimia">ΕΠΩΝΥΜΙΑ</label>
+			</div>
+			<div class="input-field col s6">
+
+			<input id="poso" type="number" name="poso" ng-blur="check('poso')" ng-model='receipt.poso' class="validate">
+				<label for="poso">ΠΟΣΟ</label>
+				<span class='red-text text-lighten-1' ng-show="awss.poso.$dirty && awss.poso.$invalid">*Please enter a number</span>
+			</div>
+		</div>
+		<div class="row">
+			<input ng-model="receipt.printed_at" id="imerominia" type="datetime-local" class="validate">
+		</div>
+		<div style="margin-top: -20px;padding-bottom: 15px;" class="input-field col s12">
+		  	<tags-input on-tag-removed="removeCategory($tag)" class='input-field' ng-model="receipt.categories">
+				<auto-complete min-length="1" source="autoCompleteCategories($query)"></auto-complete>
+			</tags-input>
+		  </div>
+		<div class="row">
+      <img ng-show="capturedImageBLOB" ng-src="{{capturedImageBLOB}}" style="width: 50%;" >
+<button ng-controller="captureImageCtrl" class="btn waves-effect waves-teal waves-white  " ng-click="takePicture()">
+	<i class="mdi-content-add-circle-outline left"></i>
+	{{ capturedImage ? 'Προσθηκη νεας φωτογραφιας' : 'Προσθηκη φωτογραφιας' }}
+</button>
+		</div>
+		
+			
+	</form>
+</div>
+
+</ion-content>
+<ion-footer-bar align-title="left" class="bar-assertive" style="
+background: none;
+border: none;
+padding: 0;
+">  
+<button style="margin: 5px;height: 85%;" ng-click="submit()" class="btn button-full waves-effect"><i class='ion-checkmark'></i><b>&nbsp Καταχωρηση</b></button>
+
+</ion-footer-bar>
+</ion-view>
