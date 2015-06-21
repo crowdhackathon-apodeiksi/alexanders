@@ -1,0 +1,136 @@
+<ion-view view-title="Settings"  cache-view='false'>
+<ion-tabs  class="tabs-striped tabs-top tabs-icon-top">
+<ion-tab title="General" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
+
+<ion-content >
+<ul class="list">
+	<li class="item item-toggle">
+		Αυτοματος Συγχρονισμος
+		<label class="toggle toggle-calm">
+			<input type="checkbox">
+			<div class="track">
+				<div class="handle"></div>
+			</div>
+		</label>
+	</li>
+	<li class="item item-toggle">
+		Ανδρας
+		<label class="toggle toggle-calm">
+			<input type="checkbox">
+			<div class="track">
+				<div class="handle"></div>
+			</div>
+		</label>
+	</li>
+	<li class="item item-toggle">
+		Γυναικα
+		<label class="toggle toggle-calm">
+			<input type="checkbox">
+			<div class="track">
+				<div class="handle"></div>
+			</div>
+		</label>
+	</li>
+	<li class="item item-toggle">
+		Ηλικια
+		<label class="toggle toggle-calm">
+			<input type="number">
+			<div class="track">
+				<div class="handle"></div>
+			</div>
+		</label>
+	</li>
+		<button ng-click='go_go()' class=" btn">Συγχρονισμος</button>
+
+	
+</ul>
+</ion-content>
+</ion-tab>
+<ion-tab title="Remote" icon-on="ion-ios-world" icon-off="ion-ios-world-outline">
+<ion-content ng-controller="SettingsCtrl" padding='true' >
+
+<div class="row">
+	<form ng-show='!logged && !register_state' name="login_form" class="col s12">
+		<div class="row">
+			<div class="input-field col s12">
+				<input ng-model='email' id="username" type="text" class="validate">
+				<label for="username">Username</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input ng-model='password' id="password" type="password" class="validate">
+				<label for="password">Password</label>
+			</div>
+		</div>
+		<div class="row">
+			<button ng-click="sign_in()" class="col btn waves-effect">Sign in</button>
+			
+		</div>
+		<div class="row">
+			<button ng-click='go_to_register()' class="col btn waves-effect waves-white">Create Account</button>
+			
+		</div>
+	</form>
+	<form ng-show='logged && !register_state' name="logout_form" class="col s12">
+		<div class="row">
+			<div class="input-field col s12">
+				<input disabled="true" ng-model='email' id="username" type="text" class="validate">
+				<label for="username">Username</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input disabled="true" ng-model='password' id="password" type="text" class="validate">
+				<label for="password">Password</label>
+			</div>
+		</div>
+		<div class="row">
+			<button ng-click="logout()" class="col btn waves-effect">Log out</button>
+			
+		</div>
+	</form>
+	<form ng-show='register_state' name="register_form" class="col s12">
+		<div class="row">
+			<div class="input-field col s12">
+				<input ng-model='email' id="username" type="text" class="validate">
+				<label for="username">Username</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input required ng-model='password' id="password" type="password" class="validate">
+				<label for="password">Password</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input required ng-model='retype_password' id="password" type="password" class="validate"
+				compare-to="password">
+				<label for="password">Retype Password</label>
+			</div>
+		</div>
+		<div class="row">
+			<button ng-click="register()" class="col btn waves-effect">Register</button>
+			
+		</div>
+		<div class="row">
+			<button ng-click="go_to_login()" class="col btn waves-effect waves-white">Back</button>
+			
+		</div>
+	</form>
+</div>
+
+</ion-content>
+</ion-tab>
+</ion-tabs>
+</ion-view>
+<style type="text/css">
+	
+	ion-tabs > ion-content > div.scroll{
+		padding-top: 95px;
+	}ion-tabs > ion-content > div.scroll-bar{
+		padding-top: 95px;
+	}
+	
+</style>

@@ -1,0 +1,46 @@
+<ion-view view-title="Scanner">
+  <ion-content>
+      <div class="list">
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">ΑΦΜ:</span>
+		    <p>{{receipt.afm}}</p>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">AA:</span>
+		    <p>{{receipt.aa}}</p>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">ΕΠΩΝΥΜΙΑ:</span>
+		    <p>{{receipt.eponimia}}</p>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">ΠΟΣΟ:</span>
+		    <p>{{receipt.poso}}&euro;</p>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">ΗΜΕΡΟΜΗΝΙΑ:</span>
+		    <p>{{receipt.printed_at | date:"d/M/yyyy  HH:mm:ss"}}</p>
+		  </label>
+		  <div class="input-field col s6">
+		  	<tags-input on-tag-removed="removeCategory($tag)" class='input-field' ng-model="receipt.categories">
+				<auto-complete min-length="1" source="autoCompleteCategories($query)"></auto-complete>
+			</tags-input>
+		  </div>
+		
+		</br>
+		
+		</div>
+
+      <img ng-show="capturedImageBLOB" ng-src="{{capturedImageBLOB}}" style="width: 50%;" >
+      <button ng-controller="captureImageCtrl" class="btn waves-effect waves-teal waves-white  " ng-click="takePicture()"><i class="mdi-content-add-circle-outline left"></i>{{ capturedImage ? 'Προσθηκη νεας φωτογραφιας' : 'Προσθηκη φωτογραφιας' }}</button>
+      <button ng-click='ff()'>fff</button>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-assertive" style="
+    background: none;
+    border: none;
+    padding: 0;
+">  
+<button style="margin: 0;height: 100%;" ng-click="submit()" class="btn button-full waves-effect"><i class='ion-checkmark'></i><b>&nbsp Καταχωρηση</b></button>
+   
+</ion-footer-bar>
+</ion-view>
