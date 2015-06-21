@@ -1,0 +1,42 @@
+<ion-view view-title="Categories" cache-view="false">
+<ion-nav-buttons side="right">
+<div class="dropdown_custom">
+	<button style="" ng-click="show_drop_date_func()" class='btn'>{{filter_by_date_item_key || "select"}}</button> 
+
+	<ul ng-show="show_drop_date" class='dropdown-content'>
+		<li ng-repeat="(filter_by_date_key,filter_by_date_value) in filter_by_date">
+			<a style="font-size: 0.8em;" ng-click=" filter_by_date_func(filter_by_date_key,filter_by_date_value); ">{{filter_by_date_key}}</a>
+		</li>
+	</ul>
+</div>
+<div class="dropdown_custom">
+	<button style="font-size: 0.8em;" ng-click="show_drop_sort_func()" class='btn'>{{sort_by_item_key || "select"}}</button> 
+
+	<!-- Dropdown Structure -->
+	<ul ng-show="show_drop_sort" class='dropdown-content'>
+		<li ng-repeat="(sort_by_key,sort_by_value) in sort_by_items">
+			<a ng-click="sort_by_func(sort_by_key,sort_by_value);">{{sort_by_key}}</a>
+		</li>
+	</ul>
+</div>
+</ion-nav-buttons>
+<ion-content>
+
+<ion-list can-swipe="{{true}}">
+<ion-item class="item item-avatar" 
+collection-repeat="category in categories | orderBy:sort_by_item_value:true"  >
+
+<p>{{category.id}}</p>
+<p>{{category.name}}</p>
+<p>COUNT: {{category.data.count }}</p>
+<p>SUM: {{category.data.sum | number:2}}</p>
+
+<ion-option-button class="btn orange darken-3" ng-click='edit(category)'>
+Edit
+</ion-option-button>
+</ion-item>
+</ion-list>
+
+</ion-content>
+
+</ion-view>

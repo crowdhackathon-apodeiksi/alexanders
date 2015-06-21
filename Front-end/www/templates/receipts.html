@@ -1,0 +1,44 @@
+<ion-view view-title="Receipts"  cache-view="false">
+<ion-nav-buttons side="right">
+     <div class="dropdown_custom">
+	<button style="font-size: 0.8em;" ng-click="show_drop_func()" class='waves-effect waves-teal btn'>{{sort_by_item || "select"}}</button> 
+
+	<!-- Dropdown Structure -->
+	<ul ng-show="show_drop" class='dropdown-content'>
+		<li ng-repeat="(sort_by_key,sort_by_value) in sort_by_items">
+			<a style="font-size: 0.8em;" ng-click="sort_by(sort_by_value)">{{sort_by_key}}</a>
+		</li>
+	</ul>
+</div>
+    </ion-nav-buttons>
+<ion-content>
+<!-- Dropdown Trigger -->
+
+
+
+
+<ion-list can-swipe="{{true}}">
+<ion-item class="item item-avatar" collection-repeat="receipt in receipts"  >
+<img width='50px' ng-src="{{receipt.image}}">
+
+<p>{{receipt.id}}</p>
+<p>{{receipt.afm}}</p>
+<p>{{receipt.eponimia}}</p>
+<p>{{receipt.poso}}</p>
+
+<ion-option-button class="btn orange darken-3" ui-sref='app.manual_entry({ id: receipt.id })'>
+      Edit
+    </ion-option-button>
+    <ion-option-button class="btn red darken-3" ng-click='remove_receipt(receipt,$index)'>
+      Delete
+    </ion-option-button>
+</ion-item>
+</ion-list>
+<ion-infinite-scroll
+ng-if="moreDataCanBeLoaded"
+on-infinite="loadMore()"
+distance="1%">
+</ion-infinite-scroll>
+</ion-content>
+
+</ion-view>
