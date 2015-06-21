@@ -1,0 +1,465 @@
+<ion-view view-title="Home" cache-view="false">
+  <ion-content>
+       <div id="DIV_1">
+	<!-- Info Boxes Style 2 -->
+
+	<div class="box" id="info-box-yellow">
+		 <span id="SPAN_3" style='font-size:60px;' ><i   class='ion-ios-star-outline' ></i></span>
+		<div id="DIV_5">
+			 <span  id="SPAN_6">Επιπεδο {{level}}</span> <span id="SPAN_7"> 
+			<div id="DIV_8">
+				<div id="DIV_9">
+
+				</div>
+			</div> <span id="SPAN_10"><small>Αρχαριος</small></span>
+</span>
+		</div>
+		<!-- /.info-box-content -->
+
+	</div>
+	<div class="boxa" id="info-box-blue">
+		 <span id="SPAN_12"><i style='font-size:60px;' class="ion-ios-list-outline"></i></span>
+		<div id="DIV_14">
+			 <span id="SPAN_15">Count {{count}}</span> 
+			<div id="DIV_17">
+				<div id="DIV_18">
+
+				</div>
+
+			</div> 
+			<small>Αρχαριος</small>
+
+		</div>
+
+	</div>
+	<div class="boxa" id="info-box-blue">
+		 <span id="SPAN_12"><i style='font-size:60px;' class="ion-ios-cart-outline"></i></span>
+		<div id="DIV_14">
+			 <span id="SPAN_15">Sum {{sum | number:2}}</span> 
+			<div id="DIV_17">
+				<div id="DIV_18">
+
+				</div>
+
+			</div> 
+			<small>Αρχαριος</small>
+
+		</div>
+
+	</div>
+
+	<div class="boxa" id="info-box-green">
+		 <span id="SPAN_12"><i style='font-size:60px;' class="ion-ios-cloud-upload-outline"></i></span>
+		<div id="DIV_14">
+			 <span id="SPAN_15">Cloud {{logged ? 'Yes' : 'No'}}</span> 
+			<div id="DIV_17">
+				<div id="DIV_18">
+
+				</div>
+
+			</div> 
+			
+		</div>
+		<!-- /.info-box-content -->
+
+	</div>
+	<!-- <div class="boxa" id="info-box-red">
+		 <span id="SPAN_12"><i style='font-size:60px;' class="ion-clipboard"></i></span>
+		<div id="DIV_14">
+			 <span id="SPAN_15">Mentions</span> 
+			<div id="DIV_17">
+				<div id="DIV_18">
+
+				</div>
+
+			</div> 
+			<small>Αρχαριος</small>
+
+		</div>
+
+	</div> -->
+	
+	<!-- /.info-box -->
+
+	
+
+</div>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-assertive" style="
+    background: none;
+    border: none;
+    padding: 0;
+">  
+
+    <button ng-click="showPopup()" style="margin: 0;height: 100%;" class="button-full btn waves-effect waves-teal"><h1 class="title"><i class='ion-clipboard'></i>&nbsp Αποδειξη</h1></button>
+    
+</ion-footer-bar>
+</ion-view>
+
+
+
+
+
+<style type="text/css">
+	#DIV_1 {
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    height: 420px;
+    min-height: 1px;
+    position: relative;
+    perspective-origin: 275.984375px 210px;
+    transform-origin: 275.984375px 210px;
+    border: 0px none rgb(51, 51, 51);
+    font: normal normal normal normal 14px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(51, 51, 51) none 0px;
+    padding: 0px 15px;
+}/*#DIV_1*/
+.boxa{
+	height: 70px !important;
+	min-height: 70px !important;
+}
+
+
+#info-box-yellow{
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 1px 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    height: 70px;
+    min-height: 70px;
+    perspective-origin: 260.984375px 45px;
+    transform-origin: 260.984375px 45px;
+    background: rgb(243, 156, 18) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 2px 2px 2px 2px;
+    font: normal normal normal normal 14px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px 0px 15px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_2*/
+
+#SPAN_3, #SPAN_12, #SPAN_21, #SPAN_30 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    float: left;
+    height: 70px;
+    text-align: center;
+    width: 90px;
+    perspective-origin: 45px 45px;
+    transform-origin: 45px 45px;
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 2px 0 0 2px;
+    font: normal normal normal normal 45px/90px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#SPAN_3, #SPAN_12, #SPAN_21, #SPAN_30*/
+
+#I_4 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 45px;
+    speak: none;
+    text-align: center;
+    
+    perspective-origin: 18.28125px 22.5px;
+    transform-origin: 18.28125px 22.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 45px/45px Ionicons;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#I_4*/
+
+#I_4:before {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 45px;
+    speak: none;
+    text-align: center;
+    
+    perspective-origin: 18.28125px 22.5px;
+    transform-origin: 18.28125px 22.5px;
+    content: '';
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 45px/45px Ionicons;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#I_4:before*/
+
+#DIV_5, #DIV_14, #DIV_23, #DIV_32 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    height: 87px;
+    
+    perspective-origin: 215.984375px 43.5px;
+    transform-origin: 215.984375px 43.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px 0px 0px 90px;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 5px 10px;
+}/*#DIV_5, #DIV_14, #DIV_23, #DIV_32*/
+
+#SPAN_6, #SPAN_15, #SPAN_24, #SPAN_33 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    height: 20px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    
+    perspective-origin: 205.984375px 10px;
+    transform-origin: 205.984375px 10px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#SPAN_6, #SPAN_15, #SPAN_24, #SPAN_33*/
+
+#SPAN_7, #SPAN_16, #SPAN_25, #SPAN_34 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    height: 25px;
+    
+    perspective-origin: 205.984375px 12.5px;
+    transform-origin: 205.984375px 12.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal bold normal 18px/25.7142868041992px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#SPAN_7, #SPAN_16, #SPAN_25, #SPAN_34*/
+
+#DIV_8, #DIV_17, #DIV_26, #DIV_35 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    height: 2px;
+    width: 100%;
+    perspective-origin: 215.984375px 1px;
+    transform-origin: 215.984375px 1px;
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 5px -10px;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#DIV_8, #DIV_17, #DIV_26, #DIV_35*/
+
+#DIV_9 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    float: left;
+    height: 2px;
+    text-align: center;
+    width: 50%;
+    perspective-origin: 107.984375px 1px;
+    transform-origin: 107.984375px 1px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 12px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: width 0.6s ease 0s;
+}/*#DIV_9*/
+
+#SPAN_10, #SPAN_19, #SPAN_28, #SPAN_37 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+    perspective-origin: 205.984375px 10px;
+    transform-origin: 205.984375px 10px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 14px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    overflow: hidden;
+}/*#SPAN_10, #SPAN_19, #SPAN_28, #SPAN_37*/
+
+#info-box-green {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 1px 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    height: 90px;
+    min-height: 90px;
+    
+    perspective-origin: 260.984375px 45px;
+    transform-origin: 260.984375px 45px;
+    background: rgb(0, 166, 90) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 2px 2px 2px 2px;
+    font: normal normal normal normal 14px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px 0px 15px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_11*/
+
+#I_13 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 45px;
+    speak: none;
+    text-align: center;
+    
+    perspective-origin: 19.6875px 22.5px;
+    transform-origin: 19.6875px 22.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 45px/45px Ionicons;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#I_13*/
+
+#I_13:before {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 45px;
+    speak: none;
+    text-align: center;
+    
+    perspective-origin: 19.6875px 22.5px;
+    transform-origin: 19.6875px 22.5px;
+    content: '';
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 45px/45px Ionicons;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#I_13:before*/
+
+#DIV_18 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    float: left;
+    height: 2px;
+    text-align: center;
+    
+    perspective-origin: 43.1875px 1px;
+    transform-origin: 43.1875px 1px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 12px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: width 0.6s ease 0s;
+}/*#DIV_18*/
+
+#info-box-red {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 1px 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    height: 90px;
+    min-height: 90px;
+    
+    perspective-origin: 260.984375px 45px;
+    transform-origin: 260.984375px 45px;
+    background: rgb(221, 75, 57) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 2px 2px 2px 2px;
+    font: normal normal normal normal 14px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px 0px 15px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_20*/
+
+#I_22 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 45px;
+    speak: none;
+    text-align: center;
+    
+    perspective-origin: 19.6875px 22.5px;
+    transform-origin: 19.6875px 22.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 45px/45px Ionicons;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#I_22*/
+
+#I_22:before {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 45px;
+    speak: none;
+    text-align: center;
+    
+    perspective-origin: 19.6875px 22.5px;
+    transform-origin: 19.6875px 22.5px;
+    content: '';
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 45px/45px Ionicons;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#I_22:before*/
+
+#DIV_27 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    float: left;
+    height: 2px;
+    text-align: center;
+    
+    perspective-origin: 151.1875px 1px;
+    transform-origin: 151.1875px 1px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 12px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: width 0.6s ease 0s;
+}/*#DIV_27*/
+
+#info-box-blue {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 1px 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    height: 90px;
+    min-height: 90px;
+    
+    perspective-origin: 260.984375px 45px;
+    transform-origin: 260.984375px 45px;
+    background: rgb(0, 192, 239) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 2px 2px 2px 2px;
+    font: normal normal normal normal 14px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px 0px 15px;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#DIV_29*/
+
+#I_31 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: 0px none rgb(255, 255, 255);
+    font: italic normal normal normal 45px/90px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#I_31*/
+
+#I_31:before {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 45px;
+    speak: none;
+    text-align: center;
+    
+    perspective-origin: 16.875px 22.5px;
+    transform-origin: 16.875px 22.5px;
+    content: '';
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 45px/45px Ionicons;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#I_31:before*/
+
+#DIV_36 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    float: left;
+    height: 2px;
+    text-align: center;
+    
+    perspective-origin: 86.390625px 1px;
+    transform-origin: 86.390625px 1px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 12px/20px 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: width 0.6s ease 0s;
+}/*#DIV_36*/
+
+
+</style>
