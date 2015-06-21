@@ -38,3 +38,16 @@ Admin Account:
 * View all receipts
 * View all categories
 * View all offers
+
+## Screenshots
+### Front End
+<img src="http://i.imgur.com/3DGMsAt.png" width="400px"/>
+<img src="http://i.imgur.com/lp7TPU3.png" width="400px"/>
+<img src="http://i.imgur.com/sunbO9V.png" width="400px"/>
+<img src="http://i.imgur.com/SRF6JrB.png" width="400px"/>
+
+
+### Back End
+![Alt text](http://i.imgur.com/xrjFXeG.png "Optional title")
+![Alt text](http://i.imgur.com/h0qhw9X.png "Optional title")
+![Alt text](http://i.imgur.com/LPjN39X.png "Optional title")
