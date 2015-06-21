@@ -1,0 +1,27 @@
+<ion-view view-title="Promo"  cache-view="false">
+<ion-nav-buttons side="right">
+	<button style="font-size: 0.8em;" class='waves-effect waves-teal btn'>PROTASI</button> 
+
+	<!-- Dropdown Structure -->
+	
+    </ion-nav-buttons>
+<ion-content>
+
+
+
+
+<ion-list>
+<ion-item class="item item-avatar" collection-repeat="promotion in promotions | orderBy:'-id'"  >
+<img width='50px' ng-src="{{promotion.image}}">
+
+<p>{{promotion.id}}</p>
+<p>{{promotion.title}}</p>
+
+
+</ion-item>
+</ion-list>
+
+
+</ion-content>
+
+</ion-view>
