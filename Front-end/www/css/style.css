@@ -1,0 +1,47 @@
+/* Empty. Add your own CSS if you like */
+.waves-white{
+	background-color: #FFFFFF !important;
+  	color: #212121 !important;
+}
+.popup-container{
+	background: rgba(0, 0, 0, 0.36);
+}
+.popup-head{
+	padding: 5px;
+}
+.popup-container .popup{
+	background-color: rgba(255, 255, 255, 1);
+}
+.custom-popup .popup-body{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.custom-popup .popup-body button{
+	margin: 0 auto;
+}
+.dropdown_custom {
+	padding-right: 10px;
+}
+.dropdown_custom button{
+	width: 110%;
+	font-size: 0.8em;
+	padding: 0px 10px 0px 10px;
+	/*float: right;*/
+}
+.dropdown_custom ul{
+	position: relative;
+	z-index: 99999;
+	opacity: 1;
+	display: block;
+	right: 0;
+}
+.dropdown_custom ul a{
+	font-size: 0.8em !important;
+}
